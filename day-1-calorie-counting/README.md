@@ -57,6 +57,15 @@ This list represents the Calories of the food carried by five Elves:
 
 Find the Elf carrying the most Calories. **How many total Calories is that Elf carrying?**
 
+<details>
+  <summary>Part One - Solution</summary>
+
+  ```shell
+  69501
+  ```
+
+</details>
+
 ---
 
 ## Part Two
@@ -72,3 +81,38 @@ In the example above, the top three Elves are the fourth Elf (with `24000` Calor
 Calories), then the fifth Elf (with `10000` Calories). The sum of the Calories carried by these three elves is `45000`.
 
 Find the top three Elves carrying the most Calories. **How many Calories are those Elves carrying in total?**
+
+<details>
+  <summary>Part Two - Solution</summary>
+
+  ```shell
+  202346
+  ```
+
+</details>
+
+---
+
+# Usage
+
+## Installation
+
+Using the following command-line instructions, you should be able to install the requirements necessary to run the
+program.
+
+```shell
+cd /path/to/repository/day-1-calorie-counting # Change to the Advent challenge's directory.
+pipenv install && pipenv shell && pip3 install pytest pytest-watch
+```
+
+## Testing
+
+Run the following commands to test the methods are outputting the correct values as verified by submission to the Advent
+Calendar.
+
+```shell
+pytest -vv
+
+# To run tests continuously while editing code, use the following command.
+ptw -- -vv
+```
