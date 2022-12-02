@@ -12,7 +12,6 @@ class CalorieCounter:
         """
         self.meals = []
         self.construct_data('input.txt')
-        self.print_results()
 
     def construct_data(self, file_name: str) -> None:
         """
@@ -30,17 +29,21 @@ class CalorieCounter:
                 else:
                     elf.append(int(line))
 
-    def elf_max(self) -> int:  # Should return 69501
+    def elf_max(self) -> int:
         """
         Fetches the meal carried by any given elf with the maximum amount of calories. This is the solution for Part One
         of Day One.
+
+        :return: The maximum amount of calories for a meal carried by an individual elf.
         """
         return max([sum(elf) for elf in self.meals])
 
-    def greediest_elves(self) -> int:  # Should return 202346
+    def greediest_elves(self) -> int:
         """
         Fetches the top three meals in terms of calorie count and sums them. This is the solution for Part Two of Day
         One.
+
+        :return:  The sum of the top three meals in terms of calorie count.
         """
         return sum(sorted([sum(elf) for elf in self.meals], reverse=True)[:3])
 
@@ -56,3 +59,4 @@ class CalorieCounter:
 
 if __name__ == "__main__":
     calories = CalorieCounter()
+    calories.print_results()
