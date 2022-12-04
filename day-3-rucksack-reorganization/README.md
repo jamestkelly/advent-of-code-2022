@@ -65,8 +65,6 @@ types?**
 
 ## Part Two
 
---- Part Two ---
-
 As you finish identifying the misplaced items, the Elves come to you with another issue.
 
 For safety, the Elves are divided into groups of three. Every Elf carries a badge that identifies their group. For
