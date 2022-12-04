@@ -1,7 +1,7 @@
 from main import CampCleanup
 
 
-def test_part_one_game():
+def test_part_one_search():
     """
     Method to test part one of day four solution.
     """
@@ -9,7 +9,7 @@ def test_part_one_game():
     assert camp_clean.part_one_search() == 490
 
 
-def test_part_two_game():
+def test_part_two_search():
     """
     Method to test part two of day four solution.
     """
