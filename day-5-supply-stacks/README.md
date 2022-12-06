@@ -13,7 +13,7 @@ rearranged, the desired crates will be at the top of each stack.
 
 The Elves don't want to interrupt the crane operator during this delicate procedure, but they forgot to ask her **
 which**
-crate will end up where, and they want to be ready to unload them as soon as possible so they can embark.
+crate will end up where, and they want to be ready to unload them as soon as possible, so they can embark.
 
 They do, however, have a drawing of the starting stacks of crates **and** the rearrangement procedure (your puzzle
 input).
