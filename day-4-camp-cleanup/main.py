@@ -2,7 +2,14 @@ import re
 
 
 class CampCleanup:
+    """
+    Main class based solution containing methods for solving Day Four of the Advent of Code 2022.
+    """
+
     def __init__(self) -> None:
+        """
+        Initializer for class level variables.
+        """
         self.data = self.construct_data("input.txt")
 
     @staticmethod
