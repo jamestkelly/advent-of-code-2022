@@ -89,7 +89,7 @@ Here are the first positions of start-of-message markers for all of the above ex
   <summary>Part Two - Solution</summary>
 
   ```shell
-  Lorem Ipsum
+  3380
   ```
 
 </details>
