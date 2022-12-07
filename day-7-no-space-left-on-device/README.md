@@ -86,7 +86,7 @@ in `a`). These directories also contain files of various sizes.
 
 Since the disk is full, your first step should probably be to find directories that are good candidates for deletion. To
 do this, you need to determine the **total size** of each directory. The total size of a directory is the sum of the
-sizes of the files it contains, directly or indirectly. (Directories themselves do not count as having any intrinsic 
+sizes of the files it contains, directly or indirectly. (Directories themselves do not count as having any intrinsic
 size.)
 
 The total sizes of the directories above can be found as follows:

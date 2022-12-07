@@ -6,6 +6,7 @@ class Directory:
     Generic tree class for the creation of `directory` objects matching to similar patterns implemented in Unix
     computer systems.
     """
+
     def __init__(self, name: str, parent: any = None, total_size: int = 0, has_files: bool = False) -> None:
         """
         Initializer for class level variables.
