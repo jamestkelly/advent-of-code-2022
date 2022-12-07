@@ -1,6 +1,6 @@
 class TuningTrouble:
     """
-    Main class based solution containing methods for solving Day Five of the Advent of Code 2022.
+    Main class based solution containing methods for solving Day Six of the Advent of Code 2022.
     """
 
     def __init__(self) -> None:
