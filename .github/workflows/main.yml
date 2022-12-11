@@ -10,18 +10,18 @@ jobs:
         with:
           python-version: "3.7"
 
-      - uses: actions/checkout@v1
-
-      - name: Fetch action
-        id: pl
-        uses: Rishabh510/Path-lister-action@master
-        with:
-          path: "day*"
-          type: ".py"
-
-      - name: Output results
+      - name: Perform tests
         run: |
-          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
-          for i in ${{ steps.pl.outputs.paths }}; do
-          echo $i
+          for dir in ./*; 			# For every item in the folder:
+            do ( 
+              if [ -d "$dir" ]; 			# If it is a directory:			
+                then (
+                  echo "$dir" &&  		# Print the path,
+                  cd "$dir" && 			# Change directory into the path,
+                  pipenv install && pipenv shell && pip3 install pytest pytest-watch
+                  pytest -vv
+                  echo. 					# Toss in a new line for readability.
+                );
+              fi
+            ); 
           done
