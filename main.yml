@@ -1,0 +1,27 @@
+---
+
+- hosts: localhost
+  tasks:
+  - name: Test All Advent of Code 2022 Solutions
+    shell: |
+      cd {{ item }} && pytest -vv
+    with_items:
+      - day-1-calorie-counting
+      - day-2-rock-paper-scissors
+      - day-3-rucksack-reorganization
+      - day-4-camp-cleanup
+      - day-5-supply-stacks
+      - day-6-tuning-trouble
+      - day-7-no-space-left-on-device
+      - day-8-treetop-tree-house
+      - day-9-rope-bridge
+      - day-10-cathode-ray-tube
+      - day-11-monkey-in-the-middle
+      - day-12-hill-climbing-algorithm
+      - day-13-distress-signal
+    register: result
+
+  - name: Print Test Results
+    debug:
+      msg: "{{ item.stdout_lines }}"
+    with_items: "{{ result.results }}"
