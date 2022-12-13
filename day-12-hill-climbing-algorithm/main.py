@@ -8,7 +8,7 @@ class HillClimbingAlgorithm:
 
     def __init__(self) -> None:
         """
-        Init
+        Initializer for class level variables.
         """
         self.start_position = ()  # Empty tuple to store the coordinates of the starting position
         self.end_goal = ()  # Empty tuple to store the coordinates of the goal
