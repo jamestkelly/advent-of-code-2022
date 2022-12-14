@@ -1,5 +1,8 @@
 ---
 
+# Ansible play to go to each subdirectory containing an Advent of Code (AoC) 2022 solution as denoted by `day-*` and
+# execute `pytest -vv`.
+
 - hosts: localhost
   tasks:
   - name: Fetch all solution subdirectories
