@@ -36,7 +36,8 @@ Sensor at x=14, y=3: closest beacon is at x=15, y=3
 Sensor at x=20, y=1: closest beacon is at x=15, y=3
 ```
 
-So, consider the sensor at `2,18`; the closest beacon to it is at `-2,15`. For the sensor at `9,16`, the closest beacon to it is at `10,16`.
+So, consider the sensor at `2,18`; the closest beacon to it is at `-2,15`. For the sensor at `9,16`, the closest beacon
+to it is at `10,16`.
 
 Drawing sensors as `S` and beacons as `B`, the above arrangement of sensors and beacons looks like this:
 
@@ -68,7 +69,9 @@ Drawing sensors as `S` and beacons as `B`, the above arrangement of sensors and 
 22 .......................B....
 ```
 
-This isn't necessarily a comprehensive map of all beacons in the area, though. Because each sensor only identifies its closest beacon, if a sensor detects a beacon, you know there are no other beacons that close or closer to that sensor. There could still be beacons that just happen to not be the closest beacon to any sensor. Consider the sensor at `8,7`:
+This isn't necessarily a comprehensive map of all beacons in the area, though. Because each sensor only identifies its
+closest beacon, if a sensor detects a beacon, you know there are no other beacons that close or closer to that sensor.
+There could still be beacons that just happen to not be the closest beacon to any sensor. Consider the sensor at `8,7`:
 
 ```shell
                1    1    2    2
@@ -100,11 +103,16 @@ This isn't necessarily a comprehensive map of all beacons in the area, though. B
 22 .......................B....
 ```
 
-This sensor's closest beacon is at `2,10`, and so you know there are no beacons that close or closer (in any positions marked `#`).
+This sensor's closest beacon is at `2,10`, and so you know there are no beacons that close or closer (in any positions
+marked `#`).
 
-None of the detected beacons seem to be producing the distress signal, so you'll need to work out where the distress beacon is by working out where it **isn't**. For now, keep things simple by counting the positions where a beacon cannot possibly be along just a single row.
+None of the detected beacons seem to be producing the distress signal, so you'll need to work out where the distress
+beacon is by working out where it **isn't**. For now, keep things simple by counting the positions where a beacon cannot
+possibly be along just a single row.
 
-So, suppose you have an arrangement of beacons and sensors like in the example above and, just in the row where `y=10`, you'd like to count the number of positions a beacon cannot possibly exist. The coverage from all sensors near that row looks like this:
+So, suppose you have an arrangement of beacons and sensors like in the example above and, just in the row where `y=10`,
+you'd like to count the number of positions a beacon cannot possibly exist. The coverage from all sensors near that row
+looks like this:
 
 ```shell
                  1    1    2    2
@@ -120,13 +128,14 @@ In this example, in the row where `y=10`, there are `26` positions where a beaco
 
 ## Part One
 
-Consult the report from the sensors you just deployed. **In the row where `y=2000000`, how many positions cannot contain a beacon?**
+Consult the report from the sensors you just deployed. **In the row where `y=2000000`, how many positions cannot contain
+a beacon?**
 
 <details>
   <summary>Part One - Solution</summary>
 
   ```shell
-  618
+  5403290
   ```
 
 </details>
@@ -135,11 +144,24 @@ Consult the report from the sensors you just deployed. **In the row where `y=200
 
 ## Part Two
 
+Your handheld device indicates that the distress signal is coming from a beacon nearby. The distress beacon is not
+detected by any sensor, but the distress beacon must have `x` and `y` coordinates each no lower than `0` and no larger
+than `4000000`.
+
+To isolate the distress beacon's signal, you need to determine its **tuning frequency**, which can be found by
+multiplying its `x` coordinate by `4000000` and then adding its `y` coordinate.
+
+In the example above, the search space is smaller: instead, the `x` and `y` coordinates can each be at most `20`. With
+this reduced search area, there is only a single position that could have a beacon: `x=14`, `y=11`. The tuning frequency
+for this distress beacon is `56000011`.
+
+Find the only possible position for the distress beacon. **What is its tuning frequency?**
+
 <details>
   <summary>Part Two - Solution</summary>
 
   ```shell
-  26358
+  10291582906626
   ```
 
 </details>

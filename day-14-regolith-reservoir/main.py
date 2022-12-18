@@ -16,6 +16,8 @@ class RegolithReservoir:
     def construct_data(self, file_name: str) -> None:
         """
         Constructs the input data into a format representing the two-dimensional vertical slices of the cave.
+
+        :param file_name: The file to be read into memory.
         """
         cave = {}  # Initialise an empty cave dictionary
         with open(file_name, "r") as file_object:
