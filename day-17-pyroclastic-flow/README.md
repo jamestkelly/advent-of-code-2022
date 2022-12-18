@@ -368,7 +368,7 @@ have stopped (but before the 2023rd rock begins falling). In this example, the t
   <summary>Part One - Solution</summary>
 
   ```shell
-  2087
+  3083
   ```
 
 </details>
@@ -377,11 +377,18 @@ have stopped (but before the 2023rd rock begins falling). In this example, the t
 
 ## Part Two
 
+The elephants **are not** impressed by your simulation. They demand to know how tall the tower will be after
+`1000000000000` rocks have stopped! Only then will they feel confident enough to proceed through the cave.
+
+In the example above, the tower would be `1514285714288` units tall!
+
+**How tall will the tower be after `1000000000000` rocks have stopped?**
+
 <details>
   <summary>Part Two - Solution</summary>
 
   ```shell
-  2591
+  1532183908048
   ```
 
 </details>
